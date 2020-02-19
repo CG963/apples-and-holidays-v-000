@@ -40,7 +40,7 @@ end
 def add_new_holiday_with_supplies(holiday_hash, season, holiday_name, supply_array)
   # code here
   # remember to return the updated hash
-  holiday_hash[season][holiday_name] = supply_array]
+  holiday_hash[season][holiday_name] = [supply_array]
 end
 
 def all_winter_holiday_supplies(holiday_hash)
@@ -63,7 +63,7 @@ def all_holidays_with_bbq(holiday_hash)
   # return an array of holiday names (as symbols) where supply lists
   # include the string "BBQ"
 names = []
-holiday_hash.colect{ |season, holidays|
+holiday_hash.collect{ |season, holidays|
 holidays.select{ |holiday, supplies|
 supplies.include?("BBQ")}.keys}.flatten
 end
